@@ -1,13 +1,13 @@
-package forty3.anhoanghome;
+package forty3.anhhoanghome;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AnhoanghomeApplicationTests {
+class AnhhoanghomeApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
