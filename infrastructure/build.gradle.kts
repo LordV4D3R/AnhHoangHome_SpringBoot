@@ -3,7 +3,15 @@ plugins {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.2"))
+    implementation(project(":domain"))
+    implementation(project(":application"))
+
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    runtimeOnly("org.postgresql:postgresql")
+
+    compileOnly("org.projectlombok:lombok")
+    annotationProcessor("org.projectlombok:lombok")
+
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
 

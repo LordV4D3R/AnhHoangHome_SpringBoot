@@ -1,3 +1,4 @@
+import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 import org.gradle.api.plugins.JavaPluginExtension
 
 plugins {
@@ -15,8 +16,14 @@ allprojects {
 }
 
 subprojects {
-    // Ensure every submodule has Java plugin so `java { toolchain {} }` exists
     apply(plugin = "java-library")
+    apply(plugin = "io.spring.dependency-management")
+
+    extensions.configure<DependencyManagementExtension> {
+        imports {
+            mavenBom("org.springframework.boot:spring-boot-dependencies:4.0.1")
+        }
+    }
 
     extensions.configure<JavaPluginExtension> {
         toolchain {
