@@ -70,7 +70,10 @@ public class User {
     }
 
     public UserId id() { return id; }
+    public FullName fullName() { return fullName; }
+    public Username username() { return username; }
     public Email email() { return email; }
+    public PasswordHash passwordHash() { return passwordHash; }
     public Role role() { return role; }
     public UserStatus status() { return status; }
 }
